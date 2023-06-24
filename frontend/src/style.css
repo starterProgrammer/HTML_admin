@@ -148,7 +148,6 @@ aside {
 }
 
 aside .top {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,7 +172,6 @@ aside .close {
 /* ---- Aside Sidebar ----- */
 
 aside .sidebar {
-    background: white;
     height: 86vh;
     display: flex;
     flex-direction: column;
@@ -543,4 +541,163 @@ main .recent a {
 
 .right .sales-analytics .add-product div span {
     font-size: 1.2rem;
+}
+
+
+/* ---------------------- Media Query -------------------------- */
+
+
+/* ---- For Laptops ----- */
+@media screen and (max-width:1200px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+
+    aside .logo h2 {
+        display: none;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a {
+        width: 5.6rem;
+        margin-left: 2.4rem;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    aside .sidebar a.active {
+        width: 100%;
+    }
+
+    aside .sidebar a:hover span {
+        margin-left: 1rem;
+    }
+
+    aside .sidebar a .message-count {
+        font-size: 6px;
+        padding: 3px 6px;
+        border-radius: 0.2rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .recent {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 8.8rem;
+    }
+
+    main .recent table {
+        width: 80vw;
+    }
+}
+
+/* ---- For Smaller Device ----- */
+@media screen and (max-width:768px) {
+
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: none;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        padding-right: var(--card-padding);
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+    }
+
+    aside .logo {
+        margin-left: 1rem;
+    }
+
+    aside .logo h2 {
+        display: inline;
+    }
+
+    aside .sidebar h3 {
+        display: inline;
+    }
+
+    aside .sidebar a {
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .close {
+        display: flex;
+        cursor: pointer;
+    }
+
+    main {
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+
+    main .date {
+        display: none;
+    }
+
+    .right .recent-updates {
+        margin-top: 2rem;
+    }
+
+    main .recent {
+        margin: 2rem 0rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .right .recent-updates h2 {
+        margin-bottom: 1.8rem;
+    }
+
+    main .recent table {
+        width: 100%;
+        margin: 0;
+    }
+
+    .right {
+        width: 94%;
+        margin: -4rem 2rem;
+    }
+
+    .right .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        background: var(--color-white);
+        padding: 0.8rem;
+        z-index: 2;
+    }
+
+    .right .top .profile .info {
+        display: none;
+    }
+
+    .right .top button {
+        display: flex;
+        background: var(--color-white);
+        position: absolute;
+        left: 0.8rem;
+    }
 }
