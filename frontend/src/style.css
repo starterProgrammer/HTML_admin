@@ -616,12 +616,19 @@ main .recent a {
         display: none;
         height: 100vh;
         position: fixed;
-        left: 0;
+        left: -100%;
         background: var(--color-white);
         width: 18rem;
         z-index: 3;
         padding-right: var(--card-padding);
         box-shadow: 1rem 3rem 4rem var(--color-light);
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            left: 0;
+        }
     }
 
     aside .logo {
